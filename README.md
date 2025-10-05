@@ -1,10 +1,20 @@
-# Codeguide Starter Fullstack
+# AI Shopping Assistant - Interactive E-commerce with AI
 
-A modern web application starter template built with Next.js 15, featuring authentication, database integration, and dark mode support.
+An innovative e-commerce web application where customers discover products through natural language conversations with an AI assistant. The AI provides personalized product recommendations and displays beautiful product cards directly within the chat interface.
 
-## Tech Stack
+## ✨ Key Features
+
+- 🤖 **AI-Powered Chat Interface**: Natural language product discovery
+- 🛍️ **Smart Product Recommendations**: AI suggests products with visual cards
+- 🔐 **User Authentication**: Secure login with saved chat history
+- 👨‍💼 **Admin Dashboard**: Complete product management (CRUD)
+- 💬 **Chat History**: View and manage past conversations
+- 🎨 **Modern UI**: Beautiful, responsive design with dark mode
+
+## 🛠️ Tech Stack
 
 - **Framework:** [Next.js 15](https://nextjs.org/) (App Router with Turbopack)
+- **AI:** [Vercel AI SDK](https://sdk.vercel.ai/) + OpenAI GPT-4o-mini
 - **Language:** TypeScript
 - **Authentication:** [Better Auth](https://better-auth.com/)
 - **Database:** [Drizzle ORM](https://orm.drizzle.team/) with PostgreSQL
@@ -13,28 +23,61 @@ A modern web application starter template built with Next.js 15, featuring authe
 - **Theme System:** [next-themes](https://github.com/pacocoursey/next-themes)
 - **Icons:** [Lucide React](https://lucide.dev/)
 
+## 🚀 Quick Start
+
+```bash
+# Clone and setup
+git clone <repository-url>
+cd warung-ai
+npm install
+
+# Setup environment
+cp .env.example .env
+# Edit .env with your API keys
+
+# Database setup
+npm run db:up
+npm run db:push
+npm run db:seed
+
+# Start development
+npm run dev
+```
+
+Visit `http://localhost:3000` to see the application.
+
+## 📱 Try These Sample Questions
+
+- "Find comfortable running shoes for marathon training"
+- "What's a good birthday gift for my girlfriend?"
+- "Show me wireless headphones under $50"
+- "I need eco-friendly kitchen products"
+
+## 📚 Documentation
+
+- [📖 **Setup Guide**](./SETUP.md) - Detailed setup instructions
+- [🔧 **Development Scripts**](./SETUP.md#development-scripts) - Available npm scripts
+- [👤 **Admin Access**](./SETUP.md#admin-access) - How to access admin panel
+- [🔌 **API Endpoints**](./SETUP.md#api-endpoints) - Available APIs
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
 - Node.js 18+ installed
 - Docker and Docker Compose (for database setup)
-- Generated project documents from [CodeGuide](https://codeguide.dev/) for best development experience
+- OpenAI API key (for AI functionality)
 
 ## Getting Started
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd codeguide-starter-fullstack
+   cd warung-ai
    ```
 
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
-   # or
-   pnpm install
    ```
 
 3. **Environment Variables Setup**
@@ -42,15 +85,11 @@ Before you begin, ensure you have the following:
      ```bash
      cp .env.example .env
      ```
-   - The default values work with Docker setup, modify as needed
+   - Add your OpenAI API key and configure other settings
 
 4. **Start the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
    ```
 
 5. **Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
